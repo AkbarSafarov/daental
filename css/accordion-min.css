@@ -1,0 +1,85 @@
+.ac {
+    margin-top: 8px;
+    background-color: #F8F8F8;
+    box-sizing: border-box;
+    padding: 24px 45px 18px 32px;
+    border-radius:  8px;
+}
+
+.ac .ac-header {
+    margin: 0;
+    padding: 0;
+}
+
+.ac .ac-trigger {
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: left;
+    width: 100%;
+    padding: 8px 32px 8px 0;
+    color: #646464;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color .25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+}
+
+.ac .ac-trigger::after {
+    content: "";
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    background: url("data:image/svg+xml,%3Csvg width='36' height='19' viewBox='0 0 36 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.40098 1.51602L18.041 17.166L33.6353 1.51557' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 10%;
+}
+
+.ac-info {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 15px;
+	color: #646464;
+}
+
+.ac-info span {
+	font-weight: 400;
+}
+.ac .ac-panel {
+    overflow: hidden;
+    transition-property: height, visibility;
+    transition-timing-function: ease;
+}
+
+.ac .ac-panel .ac-text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	letter-spacing: 0em;
+	color: #646464;
+    padding: 28px 0 8px 0;
+    margin: 0
+}
+
+.ac.js-enabled .ac-panel {
+    visibility: hidden
+}
+
+.ac.is-active .ac-panel {
+    visibility: visible
+}
+
+.ac.is-active>.ac-header .ac-trigger::after {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	
+}
