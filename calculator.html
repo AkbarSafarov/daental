@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тайтл</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/accordion-min.css">
+<link rel="stylesheet" href="css/lightgallery.css">
+<link rel="stylesheet" href="css/nouislider.min.css">
+<link rel="stylesheet" href="css/main.styles.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/panel.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous" ></script>
+</head>
+<body>
+<div class="site_wrapper">
+<div class="header inner_page_header">
+<div class="header_top">
+<div class="block_inner">
+<div class="left_header">
+<div class="menu_header">
+<ul>
+<li><a href="#">О Компании</a></li>
+<li><a href="#">Услуги</a></li>
+<li><a href="#">Оплата</a></li>
+<li><a href="#">Доставка</a></li>
+<li><a href="#">Блог</a></li>
+<li><a href="#">Контакты</a></li>
+</ul>
+</div>
+<div class="header_bottom">
+<div class="search_block">
+<form action="">
+<input type="text" placeholder="Поиск по каталогу магазина...">
+<button class="btn_search"></button>
+</form>
+</div>
+<div class="lk_block">
+<a href="">Вход</a>
+<a href="">Регистрация</a>
+</div>
+<div class="burger"></div>
+</div>
+</div>
+<div class="mobile_contacts">
+<div class="mesenjer">
+<span>+7 (495) 432 43 21</span>
+</div>
+<div class="btn_link">Заказать звонок</div>
+</div>
+<div class="logo">
+<a href="#">
+<img src="files/logo.png" alt="" class="pc">
+<img src="files/logo-mob.svg" alt="" class="mob">
+</a>
+</div>
+<div class="right_header">
+<div class="contacts">
+<div class="city">Ваш город: <strong>Москва</strong></div>
+<div class="phone"><a href="tel:88000000002">8 (800) 000 00 02</a></div>
+<div class="email"><a href="mailto:info@dentaldealer.ru">info@dentaldealer.ru</a></div>
+</div>
+<div class="datal_header">
+<div class="time">ежедневно с 9:00 до 21:00</div>
+<div class="mesenjer">
+<span class="tg"></span>
+<span class="wh"></span>
+<span>+7 (495) 432 43 21</span>
+</div>
+<div class="btn_link">Заказать звонок</div>
+</div>
+<div class="modul_header">
+<div class="social_block">
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM18.0684 8.15625C18.5254 8.15625 18.6016 8.41016 18.5254 8.71484C18.3223 9.57812 16.4941 12.168 16.4941 12.168C16.3418 12.4219 16.2656 12.5488 16.4941 12.8281C16.5111 12.8493 16.5784 12.918 16.6801 13.0218C17.1867 13.5391 18.5467 14.9274 18.7793 15.6465C18.9062 16.0781 18.7031 16.2812 18.2715 16.2812H16.7734C16.3715 16.2812 16.1668 16.0578 15.7053 15.5542C15.5254 15.3579 15.3064 15.1189 15.0215 14.834C14.1328 13.9707 13.752 13.8438 13.5234 13.8438C13.1308 13.8438 13.1317 13.975 13.1397 15.091C13.1411 15.2738 13.1426 15.4831 13.1426 15.7227C13.1426 16.0781 13.0156 16.2812 12.0762 16.2812C10.502 16.2812 8.75 15.3418 7.50586 13.5645C5.65234 10.9492 5.14453 8.99414 5.14453 8.58789C5.14453 8.35938 5.24609 8.15625 5.65234 8.15625H7.15039C7.53125 8.15625 7.68359 8.33398 7.83594 8.74023C8.57227 10.873 9.79102 12.752 10.2988 12.752C10.502 12.752 10.5781 12.6504 10.5781 12.168V9.95898C10.5466 9.32846 10.3291 9.06002 10.1688 8.86205C10.0708 8.74113 9.99414 8.6465 9.99414 8.51172C9.99414 8.33398 10.1211 8.15625 10.375 8.15625H12.7109C13.041 8.15625 13.1426 8.33398 13.1426 8.71484V11.6855C13.1426 11.9902 13.2949 12.1172 13.3711 12.1172C13.5742 12.1172 13.7266 11.9902 14.082 11.6602C15.1484 10.4414 15.9102 8.58789 15.9102 8.58789C16.0117 8.35938 16.1895 8.15625 16.5703 8.15625H18.0684Z" fill="#D3D3D3"/>
+</svg>
+</a>
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM15.4395 10.6016L15.084 12.9375H13.1797V18.625H10.6406V12.9375H8.55859V10.6016H10.6406V8.79883C10.6406 6.76758 11.8594 5.625 13.7129 5.625C14.6016 5.625 15.541 5.80273 15.541 5.80273V7.80859H14.5C13.4844 7.80859 13.1797 8.41797 13.1797 9.07812V10.6016H15.4395Z" fill="#D3D3D3"/>
+</svg>
+</a>
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM20 6C20 6.55228 19.5523 7 19 7C18.4477 7 18 6.55228 18 6C18 5.44772 18.4477 5 19 5C19.5523 5 20 5.44772 20 6ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#D3D3D3"/>
+</svg>
+</a>
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM17.4082 7.64844C17.9922 7.80078 18.4746 8.2832 18.627 8.89258C18.9316 9.95898 18.9316 12.2441 18.9316 12.2441C18.9316 12.2441 18.9316 14.5039 18.627 15.5957C18.4746 16.2051 17.9922 16.6621 17.4082 16.8145C16.3164 17.0938 12 17.0938 12 17.0938C12 17.0938 7.6582 17.0938 6.56641 16.8145C5.98242 16.6621 5.5 16.2051 5.34766 15.5957C5.04297 14.5039 5.04297 12.2441 5.04297 12.2441C5.04297 12.2441 5.04297 9.95898 5.34766 8.89258C5.5 8.2832 5.98242 7.80078 6.56641 7.64844C7.6582 7.34375 12 7.34375 12 7.34375C12 7.34375 16.3164 7.34375 17.4082 7.64844ZM14.1836 12.2441L10.5781 10.1875V14.3008L14.1836 12.2441Z" fill="#D3D3D3"/>
+</svg>
+</a>
+</div>
+<div class="shop_actions">
+<div class="compare_action"></div>
+<div class="favorites_action"></div>
+<div class="cart_mini">
+<div class="count">3</div>
+</div>
+</div>
+</div>
+</div>											
+</div>
+</div>
+<div class="header_bot_menu">
+<div class="block_inner">
+<ul>
+<li><a href="">Стоматологическое оборудование </a></li>
+<li><a href="">CAD/CAM системы</a></li>
+<li><a href="">Зуботехническое оборудование</a></li>
+<li><a href="">Наркозное оборудование</a></li>
+<li><a href="">Проектирование и лицензирование</a></li>
+<li><a href="">Акции и спецпредложения</a></li>
+</ul>
+</div>
+</div>
+</div>	
+<div class="content_block_wr"><div class="site_path">
+<div class="block_inner">
+<a href="">Главная</a><span>•</span>Стоматологическое оборудование
+</div>
+</div>
+<div class="content">
+<div class="content__left">
+<div id="elementNavigation" class="column">
+<div class="tabs changeTabs">
+<div class="tab" data-id=""><a href="/polimernye_smoly_dlya_3d_printerov/">Вернуться в раздел<img src="img/elementNavIco1.png" alt="Вернуться в раздел"></a></div>
+</div>
+</div>
+</div>
+<div class="content__right">
+<div class="content__right-inner">
+<div class="calculator_block_wr">
+<div class="title">Лизинговый калькулятор</div>
+<div class="text">Данный калькулятор предназначен для примерного расчёта лизинговых условий. Оставьте заявку, наши специалисты свяжутся с вами и сделают персональное предложение и расчёт</div>
+<div class="calculator_block" data-percent="0.0876">
+<div class="coll_range">
+<div class="field_slider">
+<div class="name">Стоимость оборудования</div>
+<div class="range_slider">
+<div id="price-slider" class="calc_slider" data-min="400000" data-max="10000000" data-start="1000000" data-step="10000" data-prefix="₽" data-value="1000000"></div>
+<div class="pips">
+<div class="min">от 400 000 ₽</div>
+<div class="max">до 10 000 000 ₽</div>
+</div>
+</div>
+</div>
+<div class="field_slider">
+<div class="name">Авансовый платеж</div>
+<div class="range_slider">
+<div id="payment-slider" class="calc_slider" data-min="15" data-max="80" data-start="30" data-step="1" data-prefix="%" data-value="30"></div>
+<div class="pips">
+<div class="min">15%</div>
+<div class="max">80%</div>
+</div>
+</div>
+</div>
+<div class="field_slider">
+<div class="name">Срок займа</div>
+<div class="range_slider">
+<div id="term-slider" class="calc_slider" data-min="12" data-max="60" data-start="24" data-step="1" data-prefix="мес" data-value="24"></div>
+<div class="pips">
+<div class="min">от 12 мес</div>
+<div class="max">до 60 мес</div>
+</div>
+</div>
+</div>
+</div>
+<div class="result_block">
+<div class="name">Ежемесячный платёж</div>
+<div class="result_main"></div>
+<div class="btn_buy">Оставить заявку</div>
+</div>
+<div class="note">Настоящий расчет сформирован без учета специальных предложений и носит исключительно информационный характер и ни при каких условиях не является публичной офертой. Окончательные условия каждого договора определяются в индивидуальном порядке лизинговыми компаниями партнерами.</div>
+</div>
+<div class="text"><strong>Лизинг</strong> – это услуга для юридических лиц, по механике действия напоминающая автокредит для физического лица. Клиент, поставщик и лизинговая компания заключают трёхсторонний договор, по которому поставщик поставляет оборудование клиенту, а клиент оплачивает аванс и все дальнейшие платежи лизинговой компании, согласно выбранному графику погашения. Оборудование будет являться собственностью лизинговой компании, до тех пор, пока клиент не выплатит лизинг полностью. После погашения лизинга право собственности на оборудование переходит к клиенту.</div>
+</div>
+<div class="preim_block_wr">
+<div class="block_inner">
+<div class="item">
+<div class="icon">
+<img src="files/preim_c1.svg" alt="">
+</div>
+<div class="name">Позволяет купить больше и лучше</div>
+<div class="text">Лизинг позволяет купить оборудование более высокого класса, который позволит увеличить средний чек, расширить перечень предоставляемых услуг, а так же позволит проводить качественную диагностику.</div>
+</div>
+<div class="item">
+<div class="icon">
+<img src="files/preim_c2.svg" alt="">
+</div>
+<div class="name">Лизинг просто получить</div>
+<div class="text">Список предоставляемых документов для получения лизинга существенно меньше, чем для получения кредита. Вам так же не понадобятся залог и/или поручители.</div>
+</div>
+<div class="item">
+<div class="icon">
+<img src="files/preim_c3.svg" alt="">
+</div>
+<div class="name">Снижает нагрузку на бюджет</div>
+<div class="text">Покупая оборудование в рассрочку, вы должны выплатить полную стоимость максимум через 1 год. График лизинга позволяет вносить платежи до 4 лет.</div>
+</div>
+<div class="item">
+<div class="icon">
+<img src="files/preim_c4.svg" alt="">
+</div>
+<div class="name">Вложения окупятся быстрее</div>
+<div class="text">Вы вносите предоплату (обычно 30%) получаете оборудование сразу. Ежемесячные суммы платите с прибыли, которую приносит вам новая техника. Ваши вложения окупаются быстрее, чем при покупке «за свои» средства.</div>
+</div>
+</div>
+</div>
+<div class="conditions_block_wr">
+<div class="left_block">
+<div class="title">Выгодные условия:</div>
+<ul>
+<li>
+<div class="icon">
+<img src="files/c_icon1.svg" alt="">
+</div>
+<div class="text">Сумма от 500 тыс. до 10 млн. рублей</div>
+</li>
+<li>
+<div class="icon">
+<img src="files/c_icon2.svg" alt="">
+</div>
+<div class="text">Срок от 12 до 48 месяцев</div>
+</li>
+<li>
+<div class="icon">
+<img src="files/c_icon3.svg" alt="">
+</div>
+<div class="text">Ставка 7-13%</div>
+</li>
+<li>
+<div class="icon">
+<img src="files/c_icon4.svg" alt="">
+</div>
+<div class="text">Оформление онлайн для любого региона РФ</div>
+</li>
+<li>
+<div class="icon">
+<img src="files/c_icon5.svg" alt="">
+</div>
+<div class="text">Решение за 24 часа после предоставления всех документов (отображается в личном кабинете)</div>
+</li>
+<li>
+<div class="icon">
+<img src="files/c_icon6.svg" alt="">
+</div>
+<div class="text">Налоговые преференции для ИП и ООО</div>
+</li>
+<li>
+<div class="icon">
+<img src="files/c_icon7.svg" alt="">
+</div>
+<div class="text">Лизинг не обременяет баланс компании</div>
+</li>
+</ul>
+</div>
+<div class="right_block">
+<div class="title">Список необходимых документов:</div>
+<ul>
+<li>Устав, ИНН, ОГРН</li>
+<li>Решение о назначении генерального директора</li>
+<li>Фотографии офиса, помещения</li>
+<li>Выписка из банковского счёта/счетов за 6 мес. (с назначением платежей) в т.ч. из клиент банка</li>
+<li>Договор аренды помещения (+документ о собственности), где будет установлено оборудование</li>
+<li>Налоговая отчетность за последний налоговый период</li>
+<li>Информация о продажах за наличные за последние 6 мес., в той форме как ведёте (управлёнка)</li>
+</ul>
+</div>
+</div>
+<div class="similar_block" id="similarBlock">
+<div class="title">Наши предложения</div>
+<div class="product_wr"><div class="product_item">
+<div class="image">
+<a href="#">
+<span class="labels">
+<span class="label new">new</span>
+<span class="label xit">xit</span>
+<span class="label sale">sale</span>
+</span>
+<img src="files/product.jpg" alt="">
+</a>
+</div>
+<div class="middle_detals">
+<div class="name">
+<a href="">Duotronpro S-6100 - компактная печь для синтеризации циркония</a>
+</div>
+<div class="note">Наркозно-дыхательный аппарат Mindray A5 (A-series) используется для проведения анестезии во время хирургической операции.</div>
+</div>
+<div class="bottom_detals">
+<div class="prices">
+<div class="current_price">586 560 руб.</div>
+<div class="old_price">600 000 руб.</div>
+</div>
+<div class="btn_actions">
+<div class="btn_buy">В корзину</div>
+<div class="compare_btn"></div>
+<div class="favorites_btn"></div>		
+</div>
+</div>
+</div><div class="product_item">
+<div class="image">
+<a href="#">
+<span class="labels">
+<span class="label new">new</span>
+<span class="label xit">xit</span>
+<span class="label sale">sale</span>
+</span>
+<img src="files/product.jpg" alt="">
+</a>
+</div>
+<div class="middle_detals">
+<div class="name">
+<a href="">Duotronpro S-6100 - компактная печь для синтеризации циркония</a>
+</div>
+<div class="note">Наркозно-дыхательный аппарат Mindray A5 (A-series) используется для проведения анестезии во время хирургической операции.</div>
+</div>
+<div class="bottom_detals">
+<div class="prices">
+<div class="current_price">586 560 руб.</div>
+<div class="old_price">600 000 руб.</div>
+</div>
+<div class="btn_actions">
+<div class="btn_buy">В корзину</div>
+<div class="compare_btn"></div>
+<div class="favorites_btn"></div>		
+</div>
+</div>
+</div><div class="product_item">
+<div class="image">
+<a href="#">
+<span class="labels">
+<span class="label new">new</span>
+<span class="label xit">xit</span>
+<span class="label sale">sale</span>
+</span>
+<img src="files/product.jpg" alt="">
+</a>
+</div>
+<div class="middle_detals">
+<div class="name">
+<a href="">Duotronpro S-6100 - компактная печь для синтеризации циркония</a>
+</div>
+<div class="note">Наркозно-дыхательный аппарат Mindray A5 (A-series) используется для проведения анестезии во время хирургической операции.</div>
+</div>
+<div class="bottom_detals">
+<div class="prices">
+<div class="current_price">586 560 руб.</div>
+<div class="old_price">600 000 руб.</div>
+</div>
+<div class="btn_actions">
+<div class="btn_buy">В корзину</div>
+<div class="compare_btn"></div>
+<div class="favorites_btn"></div>		
+</div>
+</div>
+</div></div>
+<div class="btn_more">
+<a href="" class="btn_button border">Посмотреть все</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="form_q_block">
+<div class="block_inner">
+<div class="title">Есть вопросы к нам ?</div>
+<form action="">
+<div class="col_input">
+<div class="field required">
+<input type="text" placeholder="Ваше имя" required>
+</div>
+<div class="field required">
+<input type="text" class="phone_input" placeholder="Ваш телефон" required>
+</div>
+<button class="field btn_button">Отправить</button>
+</div>
+<div class="field checkbox required">
+<label>
+<input type="checkbox" checked required>
+<i></i>
+<span>Я соглашаюсь на обработку моих персональных данных и с политикой конфиденциальности</span>
+</label>
+</div>
+</form>
+</div>
+</div></div>
+<div class="footer">
+<div class="block_inner">
+<div class="left_footer">
+<div class="logo_footer">
+<a href="">
+<img src="files/logo.png" alt="">
+</a>
+</div>
+<div class="copy">2023 © DentalDealer- интернет-магазин стоматологического оборудования</div>
+<div class="inn">ИНН 261708100520     ОГРН 319265100130321</div>
+<div class="pay_block">
+<img src="files/pay.svg" alt="">
+</div>
+<div class="design">Дизайн сайта <a href="www.pvadesign.ru">www.pvadesign.ru</a></div>
+</div>
+<div class="menu_footer menu_1">
+<div class="title">Каталог</div>
+<ul>
+<li><a href="">Стоматологическое оборудование</a></li>
+<li><a href="">CAD/CAM системы</a></li>
+<li><a href="">Наркозное оборудование</a></li>
+<li><a href="">Зуботехническое оборудование</a></li>
+<li><a href="">Проектирование и лицензирование</a></li>
+</ul>
+</div>
+<div class="menu_footer menu_2">
+<div class="title">Информация</div>
+<ul>
+<li><a href="">О компании</a></li>
+<li><a href="">Доставка и оплата</a></li>
+<li><a href="">Гарантии</a></li>
+<li><a href="">Акции</a></li>
+<li><a href="">Условия возврата</a></li>
+<li><a href="">Условия лизинга</a></li>
+<li><a href="">Политика конфиденциальности</a></li>
+</ul>
+</div>
+<div class="menu_footer menu_3">
+<div class="title">Личный кабинет</div>
+<ul>
+<li><a href="">Войти или зарегистрироваться</a></li>
+<li><a href="">Отложенные товары</a></li>
+<li><a href="">Список сравнения</a></li>
+<li><a href="">Список сравнения</a></li>
+</ul>
+</div>
+<div class="right_footer">
+<div class="phone"><a href="tel:88000000002">8 (800) 000 00 02</a></div>
+<div class="mesenjer">
+<span class="tg"></span>
+<span class="wh"></span>
+<span>+7 (495) 432 43 21</span>
+</div>
+<div class="btn_link">Заказать звонок</div>
+<div class="time">с 9:00 до 21:00 ежедневно</div>
+<div class="email"><strong>Почта:</strong><a href="mailto:info@dentaldealer.ru">info@dentaldealer.ru</a></div>
+<div class="address"><strong>Адрес:</strong> г. Москва, Волоколамское ш. 142. БЦ "Ирбис"   <a href="">на карте</a></div>
+<div class="social_block">
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM18.0684 8.15625C18.5254 8.15625 18.6016 8.41016 18.5254 8.71484C18.3223 9.57812 16.4941 12.168 16.4941 12.168C16.3418 12.4219 16.2656 12.5488 16.4941 12.8281C16.5111 12.8493 16.5784 12.918 16.6801 13.0218C17.1867 13.5391 18.5467 14.9274 18.7793 15.6465C18.9062 16.0781 18.7031 16.2812 18.2715 16.2812H16.7734C16.3715 16.2812 16.1668 16.0578 15.7053 15.5542C15.5254 15.3579 15.3064 15.1189 15.0215 14.834C14.1328 13.9707 13.752 13.8438 13.5234 13.8438C13.1308 13.8438 13.1317 13.975 13.1397 15.091C13.1411 15.2738 13.1426 15.4831 13.1426 15.7227C13.1426 16.0781 13.0156 16.2812 12.0762 16.2812C10.502 16.2812 8.75 15.3418 7.50586 13.5645C5.65234 10.9492 5.14453 8.99414 5.14453 8.58789C5.14453 8.35938 5.24609 8.15625 5.65234 8.15625H7.15039C7.53125 8.15625 7.68359 8.33398 7.83594 8.74023C8.57227 10.873 9.79102 12.752 10.2988 12.752C10.502 12.752 10.5781 12.6504 10.5781 12.168V9.95898C10.5466 9.32846 10.3291 9.06002 10.1688 8.86205C10.0708 8.74113 9.99414 8.6465 9.99414 8.51172C9.99414 8.33398 10.1211 8.15625 10.375 8.15625H12.7109C13.041 8.15625 13.1426 8.33398 13.1426 8.71484V11.6855C13.1426 11.9902 13.2949 12.1172 13.3711 12.1172C13.5742 12.1172 13.7266 11.9902 14.082 11.6602C15.1484 10.4414 15.9102 8.58789 15.9102 8.58789C16.0117 8.35938 16.1895 8.15625 16.5703 8.15625H18.0684Z" fill="#D3D3D3"/>
+</svg>
+</a>
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM15.4395 10.6016L15.084 12.9375H13.1797V18.625H10.6406V12.9375H8.55859V10.6016H10.6406V8.79883C10.6406 6.76758 11.8594 5.625 13.7129 5.625C14.6016 5.625 15.541 5.80273 15.541 5.80273V7.80859H14.5C13.4844 7.80859 13.1797 8.41797 13.1797 9.07812V10.6016H15.4395Z" fill="#D3D3D3"/>
+</svg>
+</a>
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM20 6C20 6.55228 19.5523 7 19 7C18.4477 7 18 6.55228 18 6C18 5.44772 18.4477 5 19 5C19.5523 5 20 5.44772 20 6ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#D3D3D3"/>
+</svg>
+</a>
+<a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H19C21.7614 0 24 2.23858 24 5V19C24 21.7614 21.7614 24 19 24H5C2.23858 24 0 21.7614 0 19V5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM17.4082 7.64844C17.9922 7.80078 18.4746 8.2832 18.627 8.89258C18.9316 9.95898 18.9316 12.2441 18.9316 12.2441C18.9316 12.2441 18.9316 14.5039 18.627 15.5957C18.4746 16.2051 17.9922 16.6621 17.4082 16.8145C16.3164 17.0938 12 17.0938 12 17.0938C12 17.0938 7.6582 17.0938 6.56641 16.8145C5.98242 16.6621 5.5 16.2051 5.34766 15.5957C5.04297 14.5039 5.04297 12.2441 5.04297 12.2441C5.04297 12.2441 5.04297 9.95898 5.34766 8.89258C5.5 8.2832 5.98242 7.80078 6.56641 7.64844C7.6582 7.34375 12 7.34375 12 7.34375C12 7.34375 16.3164 7.34375 17.4082 7.64844ZM14.1836 12.2441L10.5781 10.1875V14.3008L14.1836 12.2441Z" fill="#D3D3D3"/>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="js/accordion.js"></script>
+<script src="js/responsiveTabs.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/lightgallery.js"></script>
+<script src="js/tabs.js"></script>	
+<script src="js/step_form.js"></script>
+<script src="js/main-script.js"></script>
+<script src="js/inputmask.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/wNumb.js"></script>
+<script src="js/main.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+</body>
+</html>

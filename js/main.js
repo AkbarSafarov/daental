@@ -228,7 +228,170 @@ $(function(){
         	$(this).closest('form').addClass('send_done');
         }
     });
+
+    let stepsSlider = document.getElementById('steps-slider');
+
+    if (stepsSlider){
+		let inputMin = $('#input-with-keypress-min');
+		let inputMax = $('#input-with-keypress-max');
+		let inputs = [inputMin, inputMax];
+		let rangeMin = +inputMin.data('min');
+		let rangeMax = +inputMax.data('max');
+		let valueMin = +inputMin.val().replace(' руб.', '');
+		let valueMax = +inputMax.val().replace(' руб.', '');
+
+		noUiSlider.create(stepsSlider, {
+		    start: [valueMin, valueMax],
+		    connect: true,
+		    range: {
+		        'min': rangeMin,
+		        'max': rangeMax
+		    },
+		    format: wNumb({
+				decimals: 0,
+				thousand: ' ',
+			})
+		});
+
+		stepsSlider.noUiSlider.on('update', function (values, handle) {
+			inputs[handle].val(`${values[handle]} руб.`)
+		});
+	}
+
+	$('.filter_field .field_name').on('click', function(){
+		$(this).parent().toggleClass('opened');
+	});
+
+	$('.filter_field').each(function(){
+		const checkLength = $(this).find('.checkbox_field ul li').length;
+
+		if (checkLength > 12){
+			$(this).find('.checkbox_field ul li:gt(11)').addClass('hide');
+			$(this).find('.field_body').append(`<div class="show_more_check">Показать еще ${checkLength - 12}</div>`);
+		}
+	});
+
+	$(document).on('click', '.show_more_check', function(){
+		const checkLength = $(this).parents('.filter_field').find('.checkbox_field ul li').length;
+
+		if ($(this).hasClass('active')){
+			$(this).removeClass('active');			
+			$(this).parents('.filter_field').find('.checkbox_field ul li:gt(11)').addClass('hide');
+			$(this).text(`Показать еще ${checkLength - 12}`);
+		} else {
+			$(this).addClass('active');
+			$(this).parents('.filter_field').find('.checkbox_field ul li').removeClass('hide');
+			$(this).text(`Скрыть ${checkLength - 12}`);
+		}
+	});
+
+	$('.dropDownList .dropDownSelected').on('click', function(){
+		$(this).parents('.dropDownList').toggleClass('opened');
+	});
+
+	$('.dropDownList .dropDownItems .dropDownItem').on('click', function(){
+		const name = $(this).text();
+
+		$(this).siblings('.dropDownItem').removeClass('active');
+		$(this).addClass('active');
+		$(this).parents('.dropDownList').find('.dropDownSelected').text(name);
+		$(this).parents('.dropDownList').removeClass('opened');
+	});
+
+	$('.view_btn').on('click', function(){
+		$(this).siblings('.view_btn').removeClass('active');
+		$(this).addClass('active');
+
+		if ($(this).hasClass('btn_simple')){
+			$('.list_products .product_item').addClass('simple_product');
+		} else {
+			$('.list_products .product_item').removeClass('simple_product');
+		}
+	});
+
+	$('.filter_panel .name_filter').on('click', function(){
+		$(this).parent().toggleClass('oped');
+	});
 });
+
+// Calculator
+
+$(function(){
+	if ($('.calc_slider')){
+		const monthlyInterestRate  = $('.calculator_block').data('percent');
+		let payment;
+
+		function calculateLeasingPayment() {
+			const equipmentPrice = +$('#price-slider').find('.noUi-handle').attr('aria-valuenow').replace(' ', '') || +$('#price-slider').data('value');
+			const paymentPercentage  = +$('#payment-slider').find('.noUi-handle').attr('aria-valuenow') || +$('#payment-slider').data('value');
+			const termMonths = +$('#term-slider').find('.noUi-handle').attr('aria-valuenow') || +$('#term-slider').data('value');
+
+			const downPayment = (paymentPercentage / 100) * equipmentPrice;
+        	const remainingAmount = equipmentPrice - downPayment;
+
+        	payment = downPayment;
+
+        	const monthlyPayment = (remainingAmount * (monthlyInterestRate / 12)) /
+            (1 - Math.pow(1 + (monthlyInterestRate / 12), -termMonths));
+
+            let buyoutPrice = (remainingAmount * (1 + monthlyInterestRate * (termMonths / 12))) / termMonths;
+
+            buyoutPrice = buyoutPrice.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+			
+			$('.result_main').text(`${buyoutPrice} ₽`);
+		}
+
+		
+
+		$('.calc_slider').each(function(){
+			const $this = $(this);
+			const min = +$this.data('min');
+			const max = +$this.data('max');
+			const start = +$this.data('start');
+			const stepSlider = +$this.data('step');
+			let prefix = $this.data('prefix');
+
+			if (prefix !== '%') {
+				prefix = ' ' + prefix
+			}
+
+			const slider = noUiSlider.create($this[0], {
+			   	start: [ start ],
+				connect: [true, false],
+				step: stepSlider,
+				range: {
+					'min': [ min ],
+					'max': [ max ]
+				},
+				tooltips: true,
+				format: wNumb({
+					decimals: 0,
+					thousand: ' ',
+				})
+			});
+
+			
+	        let tooltip = $this.find('.noUi-tooltip');
+	        
+	        
+	        slider.on('update', function (values) {
+	            tooltip.text(values[0] + prefix);
+	            $this.attr('data-value', values[0]);
+
+	            calculateLeasingPayment();
+
+	            if(prefix == '%') {
+		            const tooltipPay = $('#payment-slider').find('.noUi-tooltip').text();
+	        		$('#payment-slider').find('.noUi-tooltip').html(`${tooltipPay} или ${payment.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} ₽` );
+	        	}
+	        });
+		})
+
+		calculateLeasingPayment();
+	}	
+})
+
+// Slider
 
 $(document).ready(function() {
 
@@ -245,6 +408,19 @@ $(document).ready(function() {
           	nextEl: ".swiper-main-next",
           	prevEl: ".swiper-main-prev",
         },
+		lazy: true,
+		
+	});
+
+	let swiperSale = new Swiper(".sale_Swiper", {
+		loop: false,
+		slidesPerView: "auto",
+      	spaceBetween: 0,	
+      	slidesPerView: 1,
+	    pagination: {
+	        el: ".swiper-pagination-sale",
+	        clickable: true,
+	    },
 		lazy: true,
 		
 	});
