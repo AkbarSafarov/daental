@@ -70,7 +70,35 @@ $(function(){
         }
     });
 
-    
+    $('.catalog_btn').on('click', function(){
+    	$('.mobile_menu_container').toggleClass('loaded');
+    	$(this).toggleClass('opened');
+    });
+
+    $(document).on("click", ".mobile_menu_container .parent > .arrow", function(e) {
+        e.preventDefault();
+        $(".mobile_menu_container .activity").removeClass("activity");
+        $(this).parent('a').siblings("ul").addClass("loaded").addClass("activity");
+    });
+    $(document).on("click", ".mobile_menu_container .back", function(e) {
+        e.preventDefault();
+        $(".mobile_menu_container .activity").removeClass("activity");
+        $(this).parent().parent().removeClass("loaded");
+        $(this).parent().parent().parent().parent().addClass("activity");
+    });
+
+    $('.mobile_menu_content li a').each(function(){
+        if ($(this).parent().find('ul').length) {
+            var thisLink = $(this).attr('href'),
+                thisText = $(this).text(); 
+
+            $(this).addClass('parent');
+			$(this).parent('li').addClass('parent-li');
+			$(this).prepend('<span class="arrow"></span>')
+			
+            $(this).next().prepend("<li class='back_btn'><a href='#' class='back'>" + thisText + "</a></li>");
+        }
+    });
 
     function swiperProducts() {
       	let mobile = window.matchMedia("(min-width: 0px) and (max-width: 767px)");
@@ -317,7 +345,7 @@ $(function(){
 // Calculator
 
 $(function(){
-	if ($('.calc_slider')){
+	if ($('.calc_slider').length){
 		const monthlyInterestRate  = $('.calculator_block').data('percent');
 		let payment;
 

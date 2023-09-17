@@ -228,6 +228,7 @@ $HnColor: #000; // Цвет заголовка
         border: 0;
         border-radius: 5px;
         min-width: 230px;
+        cursor: pointer;
     }
 }
 
@@ -1598,6 +1599,7 @@ $HnColor: #000; // Цвет заголовка
             border: 1px solid #000000;
             color: #000;
             padding: 16px 20px;
+            cursor: pointer;
         }
 
         &.aggrement {
@@ -2072,6 +2074,7 @@ $HnColor: #000; // Цвет заголовка
             border: none;
             outline: none;
             padding: 10px;
+            cursor: pointer;
             background: linear-gradient(270deg,rgba(250,92,70,0.72) 12.84%,#FF9601 100%);
         }
     }
@@ -2172,6 +2175,11 @@ $HnColor: #000; // Цвет заголовка
     }
 }
 @media all and (max-width: 1100px) {
+
+    .product {
+        padding-top: 0;
+    }
+
     .product__info {
         border-bottom: 0;
     }
@@ -2184,7 +2192,7 @@ $HnColor: #000; // Цвет заголовка
     .product__name {
         font-size: 18px;
         line-height: normal;
-        margin: 20px 0 5px 0;
+        margin: 0 0 5px 0;
     }
     .brands_block {
         flex-wrap: wrap;

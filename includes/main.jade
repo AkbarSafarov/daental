@@ -375,17 +375,17 @@ include _header_inner.jade
                 <div class="questions_block__form">
                     <div class="questions_block__form-title">Задать вопрос</div>
                     <form action="">
-                        <div class="field">
-                            <input type="text" placeholder="Ваше имя">
+                        <div class="field required">
+                            <input type="text" placeholder="Ваше имя" required>
                         </div>
-                        <div class="field">
-                            <input type="text" placeholder="Ваш e-mail для ответа">
+                        <div class="field required">
+                            <input type="text" class="email_input" placeholder="Ваш e-mail для ответа" required>
                         </div>
                         <div class="field textarea">
                             <textarea cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
                         </div>
                         <div class="field button">
-                            <button>Задать вопрос</button>
+                            <button class="form_button">Задать вопрос</button>
                         </div>
                     </form>
                 </div>
@@ -569,12 +569,18 @@ include _header_inner.jade
                 <div class="form_wrapper__form-title">Нашли дешевле? Сделаем скидку!</div>
                 <div class="form_wrapper__form-subtitle">Оставьте свой номер, и мы предложим лучшую цену на рынке!</div>
                 <form action="">
-                    <div class="field"><input type="text" placeholder="Ваше имя"></div>
-                    <div class="field"><input type="text" placeholder="Ваш телефон"></div>
+                    <div class="field required"><input type="text" placeholder="Ваше имя" required></div>
+                    <div class="field required"><input type="text" placeholder="Ваш телефон" class="phone_input" required></div>
                     <div class="field"><input type="text" placeholder="Ссылка на другой сайт"></div>
                     <div class="field"><input type="text" placeholder="Цена конкурента"></div>
-                    <div class="field"><button>Отправить</button></div>
-                    <div class="field aggrement">Я соглашаюсь на обработку <br>моих персональных данных <br>и с политикой конфиденциальности</div>
+                    <div class="field"><button class="form_button">Отправить</button></div>
+                    <div class="field checkbox required">
+                        <label>
+                            <input type="checkbox" checked required>
+                            <i></i>
+                            <span>Я соглашаюсь на обработку моих персональных данных и с политикой конфиденциальности</span>
+                        </label>
+                    </div>
                 </form>
             </div>
         </div>
@@ -803,17 +809,17 @@ include _header_inner.jade
             </div>
             <div class="popup_step_form__body">
                 <form action="/" method="POST">
-                    <div class="form_field">
-                        <input type="text" placeholder="Имя">
+                    <div class="form_field field required">
+                        <input type="text" placeholder="Имя" required>
+                    </div>
+                    <div class="form_field field required">
+                        <input type="text" class="phone_input" placeholder="Телефон" required>
+                    </div>
+                    <div class="form_field field required">
+                        <input type="text" class="email_input" placeholder="E-mail">
                     </div>
                     <div class="form_field">
-                        <input type="text" placeholder="Телефон">
-                    </div>
-                    <div class="form_field">
-                        <input type="text" placeholder="E-mail">
-                    </div>
-                    <div class="form_field">
-                        <button>Получить результаты</button>
+                        <button class="form_button">Получить результаты</button>
                     </div>
                     <div class="user_agreement">
                         <label>
