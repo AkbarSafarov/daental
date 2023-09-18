@@ -1146,40 +1146,27 @@ img, textarea, input, table {
     }
 }
 
-@media all and (min-width: 1071px) {
-.header.fixed {
-    padding-bottom: 63px;
 
-    .header_bot_menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-    }
-}
-}
 
 .header_bot_menu {
     padding: 0 11px;
     background: #FFF;
     box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
-
-
+    position: relative;
 
     @media all and (max-width: 1070px) {
         display: none;
     }
 
-    ul {
+    .block_inner > ul {
         margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         justify-content: space-between;
 
-        li {
-            a {
+        > li {
+            > a {
                 display: block;
                 padding: 24px 8px;
                 color: #818487;
@@ -1195,6 +1182,83 @@ img, textarea, input, table {
                     text-shadow: 0 0 1px #565656;
                 }
             }
+
+            .drop {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+                display: none;
+                padding: 24px 0;
+
+                .limiter {
+                    max-width: $siteWidth;
+                    margin: 0 auto;
+                    display: flex;
+                    gap: 20px;
+
+                    .nextColumn {
+                        flex: 0 0 calc(25% - 16px);
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        text-align: center;
+
+                        > li {
+                            padding-bottom: 10px;
+
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
+
+                            > a {
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                color: #000000;
+                                font-weight: 600;
+                                font-size: 14px;
+                            }
+
+                            > ul {
+                                padding: 0;
+                                margin: 0;
+                                list-style: none;
+
+                                li {
+                                    padding-top: 6px;
+
+                                    a {
+                                        text-decoration: none;
+                                        color: #000000;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover .drop {
+                display: block;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1071px) {
+    .header.fixed {
+        padding-bottom: 63px;
+
+        .header_bot_menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
         }
     }
 }
@@ -1704,7 +1768,7 @@ img, textarea, input, table {
         padding: 24px 25px 24px;
 
         .title {
-            font-size: 22px;
+            font-size: 21px;
             color: #E7A257;
         }
 
