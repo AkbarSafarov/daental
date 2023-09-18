@@ -64,7 +64,6 @@ a img {border-color: $siteColor;}
 a[href^="tel:"] {
     text-decoration: none;
     color: inherit;
-    cursor: default;
 }
 
 img, textarea, input, table {
@@ -573,7 +572,7 @@ img, textarea, input, table {
                 }
 
                 a {
-                    color: #fff;
+                    color: #130F26;
                     text-decoration: none;
                 }
             }
@@ -705,6 +704,15 @@ img, textarea, input, table {
                                 outline: none;
                                 margin: auto;
                                 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.7321 14.8051C19.2798 11.3302 18.9831 6.42182 15.842 3.28072C12.3733 -0.188004 6.7494 -0.188003 3.28068 3.28072C-0.188043 6.74944 -0.188043 12.3734 3.28068 15.8421C6.42177 18.9832 11.3301 19.2799 14.8051 16.7322C14.8275 16.7582 14.851 16.7836 14.8758 16.8083L17.7745 19.7071C18.3082 20.2408 19.1734 20.2408 19.707 19.7071C20.2407 19.1735 20.2407 18.3083 19.707 17.7746L16.8083 14.8758C16.7836 14.8511 16.7582 14.8276 16.7321 14.8051ZM13.9095 5.21324C16.3109 7.61467 16.3109 11.5081 13.9095 13.9096C11.5081 16.311 7.61459 16.311 5.21317 13.9096C2.81174 11.5081 2.81174 7.61467 5.21317 5.21324C7.61459 2.81182 11.5081 2.81182 13.9095 5.21324Z' fill='%23727070'/%3E%3C/svg%3E") 50% no-repeat;
+                            }
+
+                            @media all and (max-width: 500px) {
+                                padding-right: 33px;
+
+                                input {
+                                    padding: 0 8px;
+                                    font-size: 11px;
+                                }
                             }
                         }
                     }
@@ -1138,10 +1146,26 @@ img, textarea, input, table {
     }
 }
 
+@media all and (min-width: 1071px) {
+.header.fixed {
+    padding-bottom: 63px;
+
+    .header_bot_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+    }
+}
+}
+
 .header_bot_menu {
     padding: 0 11px;
     background: #FFF;
     box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
+
+
 
     @media all and (max-width: 1070px) {
         display: none;
@@ -1650,6 +1674,10 @@ img, textarea, input, table {
             color: #fff;
         }
 
+        input::-webkit-input-placeholder {
+            color: #fff;
+        }
+
     }
 
     .field.checkbox{
@@ -1676,7 +1704,7 @@ img, textarea, input, table {
         padding: 24px 25px 24px;
 
         .title {
-            font-size: 24px;
+            font-size: 22px;
             color: #E7A257;
         }
 
@@ -1762,6 +1790,10 @@ img, textarea, input, table {
     @media all and (max-width: 1020px){
         background: #2D2D2D;
         padding: 23px 10px 23px;
+    }
+
+    @media all and (max-width: 1070px) {
+        padding-bottom: 105px;
     }
 
     .block_inner {
@@ -2723,6 +2755,11 @@ img, textarea, input, table {
                 width: auto;
                 box-sizing: border-box;
                 padding: 2px;
+                display: none;
+
+                &:nth-child(-n+4){
+                    display: flex;
+                }
             }
         }
     }

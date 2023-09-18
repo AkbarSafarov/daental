@@ -417,6 +417,16 @@ $(function(){
 
 		calculateLeasingPayment();
 	}	
+
+	var tmenu = $('.header_bot_menu'),
+        tmenuOffset = tmenu.offset();
+    $(window).scroll(function(){
+      	if (($(window).scrollTop() > tmenuOffset.top + 20)) {
+        	$('.header').addClass('fixed'); 
+      	} else {
+        	$('.header').removeClass('fixed');
+      	};
+    }); 
 })
 
 // Slider

@@ -606,6 +606,12 @@ $HnColor: #000; // Цвет заголовка
     opacity: 0.8;
 }
 
+#elementNavigation .tabs .img_empt {
+    width: 64px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 #elementNavigation .tabs a:hover {
     color: #888888;
 }
@@ -1796,6 +1802,11 @@ $HnColor: #000; // Цвет заголовка
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease-in-out;
+
+    @media all and (max-width: 1070px){
+        bottom: 82px;
+    }
+
     &.active {
         opacity: 1;
         visibility: visible;
@@ -2182,6 +2193,10 @@ $HnColor: #000; // Цвет заголовка
 
     .product__info {
         border-bottom: 0;
+
+        .product__article {
+            flex: 1 1 auto;
+        }
     }
     .product__left {
         width: 400px;
