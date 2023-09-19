@@ -40,6 +40,24 @@ $(function(){
 
 	// formPopup('.contacts_btn','.contacts_popup');
 
+    function thModal(){
+    	$('.th_modal_block').addClass('opened');
+
+    	if ($('.form_wrapper').hasClass('opened')){
+    		$('.form_wrapper').removeClass('opened');
+    	}
+
+    	if ($('.popup_step_form').hasClass('active')){
+    		$('.popup_step_form').removeClass('active');
+    	}
+
+    	$('.btn_close').on('click', function(){
+    		if ($('.th_modal_block').hasClass('opened')){
+    			$('.th_modal_block').removeClass('opened');
+    		}
+    	})
+    }
+
     var menuBtn = $('.burger'),
         menuWrapper = $('.menu_burger'),
         menuClose = $('.menuClose'),        
@@ -254,6 +272,7 @@ $(function(){
         } else {
         	e.preventDefault();
         	$(this).closest('form').addClass('send_done');
+        	thModal();
         }
     });
 

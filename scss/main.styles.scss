@@ -457,6 +457,96 @@ img, textarea, input, table {
     }
 }
 
+.th_modal_block{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+    padding: 100px 40px 40px 40px;
+
+    @media all and (max-width: 767px) {
+        padding: 20px 10px;
+    }
+
+    &:before {
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+    }
+
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .th_modal_inner {
+        width: 450px;
+        margin: auto;
+        position: relative;   
+        display: inline-block;
+        white-space: normal;
+        vertical-align: middle;
+        text-align: left; 
+        z-index: 10;    
+
+        @media all and (max-width: 767px) {
+            width: 300px;
+        }
+    }
+
+    .inner {
+        text-align: center;
+        padding: 30px 40px;
+        background: #fff;
+
+        .title {
+            margin-bottom: 24px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .text {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .btn_close {
+            display: inline-block;
+            vertical-align: top;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            background-color: #000000;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            border-radius: 2px;
+            line-height: 40px;
+            margin-top: 24px;
+            padding: 0 24px;
+            color: #ffffff;
+            height: 40px;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
 .site_wrapper {
     position: relative;
     display: flex;
@@ -816,6 +906,7 @@ img, textarea, input, table {
 
                         strong {
                             width: 700px;
+                            cursor: pointer;
                         }
                     }
 
