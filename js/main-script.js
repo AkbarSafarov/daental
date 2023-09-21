@@ -2,34 +2,35 @@
 
 
 $(function(){
-	$('.reviews_block__items-wrap').slick({
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		arrows: true,
-		dots: false,
-		responsive: [
-			{
-				breakpoint: 1261,
-				settings: {
-					slidesToShow: 2
-				}
-			},
-			{
-				breakpoint: 1023,
-				settings: {
-					slidesToShow: 2
-				}
-			},
-			{
-				breakpoint: 769,
-				settings: {
-					slidesToShow: 1
-				}
-			},
-		]
-	});
+	// $('.reviews_block__items-wrap').slick({
+	// 	slidesToShow: 2,
+	// 	slidesToScroll: 1,
+	// 	arrows: true,
+	// 	dots: false,
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 1261,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 1023,
+	// 			settings: {
+	// 				slidesToShow: 2
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 769,
+	// 			settings: {
+	// 				slidesToShow: 1
+	// 			}
+	// 		},
+	// 	]
+	// });
 
 	let productTabs = $('#initProductTabs');
+	
 	productTabs.responsiveTabs({
 	    rotate: false,
 	    startCollapsed: 'accordion',

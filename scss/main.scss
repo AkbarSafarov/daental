@@ -302,102 +302,7 @@ $HnColor: #000; // Цвет заголовка
     }
 }
 
-.form-popup-wrapper {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: auto;
-    white-space: nowrap;
-    text-align: center;
-    font-size: 0;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100;
-    background: rgba(#1E193D, 0.2);
-    transition: all 0.5s;
-    padding: 100px 40px 40px 40px;
 
-    @media all and (max-width: 767px) {
-        padding: 0;
-    }
-
-    @media all and (min-width: 768px) {
-
-        &:before {
-            height: 100%;
-            display: inline-block;
-            vertical-align: middle;
-            content: '';
-        }
-    }
-
-    &.opened {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .formExtraWrapper {
-        width: 588px;
-        margin: auto;
-        position: relative;
-        display: inline-block;
-        white-space: normal;
-        vertical-align: middle;
-        text-align: left;
-        z-index: 10;
-
-        @media all and (max-width: 767px) {
-            width: 300;
-            display: block;
-        }
-
-        .close-form {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 26px;
-            height: 26px;
-            background: 50% url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.7071 2.70711C23.0976 2.31658 23.0976 1.68342 22.7071 1.29289C22.3166 0.902369 21.6834 0.902369 21.2929 1.29289L22.7071 2.70711ZM1.29289 21.2929C0.902369 21.6834 0.902369 22.3166 1.29289 22.7071C1.68342 23.0976 2.31658 23.0976 2.70711 22.7071L1.29289 21.2929ZM2.70711 1.29289C2.31658 0.902369 1.68342 0.902369 1.29289 1.29289C0.902369 1.68342 0.902369 2.31658 1.29289 2.70711L2.70711 1.29289ZM21.2929 22.7071C21.6834 23.0976 22.3166 23.0976 22.7071 22.7071C23.0976 22.3166 23.0976 21.6834 22.7071 21.2929L21.2929 22.7071ZM21.2929 1.29289L1.29289 21.2929L2.70711 22.7071L22.7071 2.70711L21.2929 1.29289ZM1.29289 2.70711L21.2929 22.7071L22.7071 21.2929L2.70711 1.29289L1.29289 2.70711Z' fill='%23322D50'/%3E%3C/svg%3E%0A") no-repeat;
-            cursor: pointer;
-            z-index: 101;
-        }
-    }
-}
-
-.form-b {
-    font-size: 0;
-    padding: 52px 33px 48px;
-    box-sizing: border-box;
-    position: relative;
-    background: #fff;
-    z-index: 100;
-
-    @media all and (max-width: 767px) {
-        padding: 48px 20px;
-    }
-
-    .title {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 100%;
-        text-transform: uppercase;
-        color: #0C395F;
-        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-        padding-bottom: 14px;
-    }
-
-    .text {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 100%;
-        color: #0C395F;
-        padding-bottom: 52px;
-    }
-}
 
 
 /* Slider */
@@ -2968,6 +2873,76 @@ $HnColor: #000; // Цвет заголовка
         .choose_answer__item {
             width: 100%;
             margin: 0;
+        }
+    }
+}
+
+.content__right-inner .reviews_block {
+
+    &__items-wrap{
+        padding: 0 44px;
+        position: relative;
+        @media all and (max-width: 769px) {
+            padding: 0;
+        }
+    }
+
+    .swiper_arrow {
+
+         .swiper_arrow_btn {
+            position: absolute;
+            top: 0;
+            width: 44px;
+            height: 44px;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='36' viewBox='0 0 20 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6505 1.6959L2.00045 17.3359L18.4604 33.7959' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+            cursor: pointer;
+            margin: auto;
+            bottom: 0;
+
+            &.swiper-brand-prev{
+                left: 0;
+            }
+
+            &.swiper-brand-next {
+                right: 0;
+                transform: rotate(180deg);
+            }
+
+            @media all and (max-width: 769px) {
+                z-index: 1;
+                width: 10px;
+                height: 18px;
+                background-size: 10px;
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='22' viewBox='0 0 14 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5079 19.7544L2 10.9843L12 1.75439' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+
+
+.pr_page {
+
+    .product_wr {
+        @media all and (min-width: 1001px) {
+            .product_item:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.buy_product_more {
+
+    @media all and (max-width: 767px) {
+        .swiper-wrapper {
+
+            .swiper-slide:last-child{
+                display: none;
+            }
         }
     }
 }

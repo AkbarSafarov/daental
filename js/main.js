@@ -5,43 +5,12 @@ $(function(){
 	var $body = $(document.body),
       	$html = $(document.documentElement);
 
- //  function formPopup($btn,$wrap){
-
- //    var closeForm = $('.formExtraWrapper .close-form'),
- //        formWrap = $($wrap),
- //        formBtn = $($btn),
- //        formOpened = 'opened',
- //        overflowHidden = 'oveflowHidden';
-
- //    closeForm.on('click', function() {
- //        formWrap.removeClass(formOpened);
- //        $html.removeClass(overflowHidden);
- //    });
- //    formBtn.on('click', function(event) {
- //        formWrap.addClass(formOpened);
- //        $html.toggleClass(overflowHidden);
- //        event.preventDefault();
- //    });
-
- //    $html.on('keyup', function(event) {
- //        if (formWrap.hasClass(formOpened) && event.keyCode == 27) {
- //            formWrap.removeClass(formOpened);
- //            $html.removeClass(overflowHidden);
- //        }
- //    });
- //    $body.on('click touchstart', function(a) {
- //        if ($(a.target).closest('.formExtraWrapper').length || $(a.target).closest(formBtn).length) return;
- //        if (formWrap.hasClass(formOpened)) {
- //            formWrap.removeClass(formOpened);
- //            $html.removeClass(overflowHidden);
- //        }
- //    });
- //  }
-
-	// formPopup('.contacts_btn','.contacts_popup');
+	  
 
     function thModal(){
     	$('.th_modal_block').addClass('opened');
+    	$('html').removeClass('oveflowHidden');
+    	$('.form-popup-wrapper').removeClass('opened');
 
     	if ($('.form_wrapper').hasClass('opened')){
     		$('.form_wrapper').removeClass('opened');
@@ -359,11 +328,68 @@ $(function(){
 	$('.filter_panel .name_filter').on('click', function(){
 		$(this).parent().toggleClass('oped');
 	});
+
+	$('.catecor_menu li a').each(function(){
+        if ($(this).parent().find('ul').length) {
+            $(this).append('<span class="arrow"></span>');
+        }
+    });
+        
+    $('.catecor_menu li').find('a .arrow').on('click', function(event){
+        $(this).parents('li:first').siblings().removeClass('opened');
+        $(this).parents('li:first').toggleClass('opened');
+        return false;
+    });
 });
 
 // Calculator
 
 $(function(){
+
+	function formPopup($btn,$wrap){
+		let $body = $(document.body),
+      		$html = $(document.documentElement),
+	    	closeForm = $('.formExtraWrapper .close-form'),
+	        formWrap = $($wrap),
+	        formBtn = $($btn),
+	        formOpened = 'opened',
+	        overflowHidden = 'oveflowHidden';
+
+	    closeForm.on('click', function() {
+	        formWrap.removeClass(formOpened);
+	        $html.removeClass(overflowHidden);
+	    });
+	    formBtn.on('click', function(event) {
+	        formWrap.addClass(formOpened);
+	        $html.toggleClass(overflowHidden);
+	        event.preventDefault();
+
+	        const price = $('#price-slider').find('.noUi-tooltip').text();
+	        const payment = $('#payment-slider').find('.noUi-tooltip').text();
+	        const term = $('#term-slider').find('.noUi-tooltip').text();
+	        const result = $('.result_main').text();
+	        const resultStr = `Стоимость оборудования - ${price}\nАвансовый платеж - ${payment}\nСрок займа - ${term}\nЕжемесячный платёж - ${result}`;
+
+	        $('.rusult_textarea').val(resultStr);
+	    });
+
+	    $html.on('keyup', function(event) {
+	        if (formWrap.hasClass(formOpened) && event.keyCode == 27) {
+	            formWrap.removeClass(formOpened);
+	            $html.removeClass(overflowHidden);
+	        }
+	    });
+	    $body.on('click touchstart', function(a) {
+	        if ($(a.target).closest('.formExtraWrapper').length || $(a.target).closest(formBtn).length) return;
+	        if (formWrap.hasClass(formOpened)) {
+	            formWrap.removeClass(formOpened);
+	            $html.removeClass(overflowHidden);
+	        }
+	    });
+	}
+
+	formPopup('.calc_result_btn','.form_calc');
+
 	if ($('.calc_slider').length){
 		const monthlyInterestRate  = $('.calculator_block').data('percent');
 		let payment;
@@ -572,6 +598,27 @@ $(document).ready(function() {
 		    1020: {
 		      	spaceBetween: 62,
 		      	slidesPerView: 6
+		    }
+		}
+	});
+
+	let reviewsSlider = new Swiper(".reviews_block__items-wrap", {
+		loop: false,
+      	spaceBetween: 62,	
+      	slidesPerView: 2,
+	    navigation: {
+          	nextEl: ".swiper-brand-next",
+          	prevEl: ".swiper-brand-prev",
+        },
+		lazy: true,
+		breakpoints: {
+		    0: {
+		      	spaceBetween: 48,
+		      	slidesPerView: 1
+		    },
+		    769: {
+		      	spaceBetween: 48,
+		      	slidesPerView: 2
 		    }
 		}
 	});

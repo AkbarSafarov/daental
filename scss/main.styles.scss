@@ -373,22 +373,19 @@ img, textarea, input, table {
     opacity: 0;
     visibility: hidden;
     z-index: 100;
-    background: rgba(#1E193D, 0.2);
+    background: rgba(0, 0, 0, .5);
     transition: all 0.5s;
     padding: 100px 40px 40px 40px;
 
     @media all and (max-width: 767px) {
-        padding: 0;
+        padding: 30px 10px 90px;
     }
 
-    @media all and (min-width: 768px) {
-
-        &:before {
-            height: 100%;
-            display: inline-block;
-            vertical-align: middle;
-            content: '';
-        }
+    &:before {
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
     }
 
     &.opened {
@@ -397,7 +394,7 @@ img, textarea, input, table {
     }
 
     .formExtraWrapper {
-        width: 588px;
+        width: 320px;
         margin: auto;
         position: relative;   
         display: inline-block;
@@ -407,17 +404,16 @@ img, textarea, input, table {
         z-index: 10;    
 
         @media all and (max-width: 767px) {
-            width: 300;
-            display: block;
+            width: 300px;
         }
 
         .close-form {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 26px;
-            height: 26px;
-            background: 50% url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.7071 2.70711C23.0976 2.31658 23.0976 1.68342 22.7071 1.29289C22.3166 0.902369 21.6834 0.902369 21.2929 1.29289L22.7071 2.70711ZM1.29289 21.2929C0.902369 21.6834 0.902369 22.3166 1.29289 22.7071C1.68342 23.0976 2.31658 23.0976 2.70711 22.7071L1.29289 21.2929ZM2.70711 1.29289C2.31658 0.902369 1.68342 0.902369 1.29289 1.29289C0.902369 1.68342 0.902369 2.31658 1.29289 2.70711L2.70711 1.29289ZM21.2929 22.7071C21.6834 23.0976 22.3166 23.0976 22.7071 22.7071C23.0976 22.3166 23.0976 21.6834 22.7071 21.2929L21.2929 22.7071ZM21.2929 1.29289L1.29289 21.2929L2.70711 22.7071L22.7071 2.70711L21.2929 1.29289ZM1.29289 2.70711L21.2929 22.7071L22.7071 21.2929L2.70711 1.29289L1.29289 2.70711Z' fill='%23322D50'/%3E%3C/svg%3E%0A") no-repeat;
+            top: -30px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+            background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.7769 17.9361L18.1081 19.6049L12.8473 14.344L7.69954 19.4917L5.91763 17.7098L11.0654 12.5621L5.80449 7.30122L7.47326 5.63245L12.7341 10.8933L17.9102 5.7173L19.6921 7.49921L14.516 12.6752L19.7769 17.9361Z' fill='white'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
             cursor: pointer;
             z-index: 101;
         }
@@ -426,34 +422,24 @@ img, textarea, input, table {
 
 .form-b {
     font-size: 0;
-    padding: 52px 33px 48px;
+    padding: 30px 34px 10px;
     box-sizing: border-box;
     position: relative;
     background: #fff;
     z-index: 100;
 
-    @media all and (max-width: 767px) {
-        padding: 48px 20px;
-    }
-
     .title {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 100%;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        padding-bottom: 17px;
+        color: #000;
         text-transform: uppercase;
-        color: #0C395F;
-        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-        padding-bottom: 14px;
     }
 
-    .text {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 100%;
-        color: #0C395F;
-        padding-bottom: 52px;
+    .form_button {
+        width: 100%;
+        display: block;
     }
 }
 
@@ -3989,7 +3975,7 @@ img, textarea, input, table {
 }
 
 .links_block {
-    padding: 0 10px;
+    padding: 0 12px;
 
     .block_inner {
 
@@ -4018,6 +4004,7 @@ img, textarea, input, table {
                 }
 
                 &.last {
+                    display: block;
                     a {
                         text-decoration: none;
                         color: #FAAA46;
@@ -4030,9 +4017,20 @@ img, textarea, input, table {
             }
 
             @media all and (max-width: 767px) {
-                gap: 1px 17px;
+                gap: 1px 21px;
+
+                li{
+                    display: none;
+
+                    &:nth-child(-n+3){
+                        display: block;
+                    }
+                }
             }
         }
     }
 }
 
+.rusult_textarea {
+    display: block;
+}
