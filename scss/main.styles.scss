@@ -3806,6 +3806,12 @@ img, textarea, input, table {
             }
         }
 
+        @media all and (max-width: 1200px) {
+            span {
+                font-size: 32px;
+            }
+        }
+
         @media all and (max-width: 1020px){
             padding-bottom: 18px;
 
