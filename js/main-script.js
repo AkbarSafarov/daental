@@ -47,7 +47,7 @@ $(function(){
 		arrows: false,
 		fade: true,
 		draggable: false,
-		asNavFor: '.card-slider.horizontal .card-slider__thumbs-slider',
+		asNavFor: '.product__left-slider-thumbs',
 		responsive: [
 			{
 				breakpoint: 768

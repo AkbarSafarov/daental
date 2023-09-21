@@ -569,6 +569,12 @@ $HnColor: #000; // Цвет заголовка
 
         &-slider {
             margin-bottom: 17px;
+            &-thumbs {
+                .slick-slide {
+                    margin-right: 5px;
+                    margin-left: 5px;
+                }
+            }
         }
     }
 
