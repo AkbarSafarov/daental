@@ -579,7 +579,11 @@ $HnColor: #000; // Цвет заголовка
     }
 
     &__right {
-        width: calc(100% - 535px);
+        width: calc(100% - 565px);
+
+        @media all and (min-width: 981px) {
+            margin-left: 30px;
+        }
     }
 
     &__name {

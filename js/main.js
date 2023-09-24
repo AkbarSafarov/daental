@@ -527,7 +527,7 @@ $(document).ready(function() {
     function swiperCard() {
       	let mobile = window.matchMedia("(min-width: 0px) and (max-width: 767px)");
 
-      	if (mobile.matches) {
+      	if (mobile.matches && sliderWr.length) {
       		mySwiperPreim.destroy();
 		    init = false;
         	
