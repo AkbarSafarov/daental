@@ -521,50 +521,41 @@ $(document).ready(function() {
 	});
 
 	let mySwiperPreim
-    let init = false;
     let sliderWr = document.querySelector('.buy_productSwiper');
 
     function swiperCard() {
       	let mobile = window.matchMedia("(min-width: 0px) and (max-width: 767px)");
 
-      	if (mobile.matches && sliderWr.length) {
-      		mySwiperPreim.destroy();
-		    init = false;
-        	
-		} else{
-		    if (!init) {
-        		init = true;
-
-				mySwiperPreim = new Swiper(".buy_productSwiper", {
-			        spaceBetween: 30,
-			        loop: true,
-			    	centeredSlides: false,			
-			        slidesPerView: 4,
-				    breakpoints: {
-					    0: {
-					    	slidesPerView: 2,
-					      	spaceBetween: 6
-					    },
-					    700: {
-					      	spaceBetween: 6,
-					      	slidesPerView: 2
-					    },
-					    1000: {
-					      	spaceBetween: 18,
-					      	slidesPerView: 3
-					    },
-					    1100: {
-					      	spaceBetween: 30,
-					      	slidesPerView: 4
-					    }
-					},
-			        navigation: {
-			          nextEl: ".swiper-buy-next",
-			          prevEl: ".swiper-buy-prev",
-			        },
-					lazy: true
-			    });
-			}	
+      	if (!mobile.matches) {
+		    mySwiperPreim = new Swiper(".buy_productSwiper", {
+		        spaceBetween: 30,
+		        loop: true,
+		    	centeredSlides: false,			
+		        slidesPerView: 4,
+			    breakpoints: {
+				    0: {
+				    	slidesPerView: 2,
+				      	spaceBetween: 6
+				    },
+				    700: {
+				      	spaceBetween: 6,
+				      	slidesPerView: 2
+				    },
+				    1000: {
+				      	spaceBetween: 18,
+				      	slidesPerView: 3
+				    },
+				    1100: {
+				      	spaceBetween: 30,
+				      	slidesPerView: 4
+				    }
+				},
+		        navigation: {
+		          nextEl: ".swiper-buy-next",
+		          prevEl: ".swiper-buy-prev",
+		        },
+				lazy: true
+		    });	
 	  	}
 	}
 
