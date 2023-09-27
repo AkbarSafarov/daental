@@ -2505,6 +2505,7 @@ img, textarea, input, table {
         
             &:hover,&.active {
                 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='33' viewBox='0 0 23 33' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 3.5C16 1.567 17.567 0 19.5 0C21.433 0 23 1.567 23 3.5V33H16V3.5ZM8 10.5C8 8.567 9.567 7 11.5 7C13.433 7 15 8.567 15 10.5V33H8V10.5ZM3.5 16C1.567 16 0 17.567 0 19.5V33H7V19.5C7 17.567 5.433 16 3.5 16Z' fill='%23FC8974'/%3E%3C/svg%3E") 50% no-repeat;
+                background-size: contain;
             }
         }
 
@@ -2515,11 +2516,11 @@ img, textarea, input, table {
             cursor: pointer;
             transition: all 0.3s;
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.8394 9.92155C11.8431 9.91605 11.8468 9.91055 11.8506 9.90505C11.8543 9.91055 11.858 9.91605 11.8617 9.92155L11.8394 9.92155ZM1.16136 10.0267C1.30649 10.2316 1.46351 10.4278 1.63143 10.6142L11.8505 23.3865L22.0691 10.6148C22.2374 10.428 22.3948 10.2314 22.5402 10.026L22.6238 9.92155H22.6126C23.3001 8.90806 23.7011 7.6893 23.7011 6.37812C23.7011 2.85558 20.8071 0 17.2372 0C14.9888 0 13.0086 1.13264 11.8506 2.8512C10.6925 1.13264 8.71228 0 6.46395 0C2.89401 0 0 2.85558 0 6.37812C0 7.6893 0.400967 8.90806 1.08851 9.92155H1.07727L1.16136 10.0267Z' fill='%23898B8F'/%3E%3C/svg%3E") 50% no-repeat;
-            background-size: 24px;
+            background-size: contain;
 
             &:hover,&.active {
                 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.8394 9.92155C11.8431 9.91605 11.8468 9.91055 11.8506 9.90505C11.8543 9.91055 11.858 9.91605 11.8617 9.92155L11.8394 9.92155ZM1.16136 10.0267C1.30649 10.2316 1.46351 10.4278 1.63143 10.6142L11.8505 23.3865L22.0691 10.6148C22.2374 10.428 22.3948 10.2314 22.5402 10.026L22.6238 9.92155H22.6126C23.3001 8.90806 23.7011 7.6893 23.7011 6.37812C23.7011 2.85558 20.8071 0 17.2372 0C14.9888 0 13.0086 1.13264 11.8506 2.8512C10.6925 1.13264 8.71228 0 6.46395 0C2.89401 0 0 2.85558 0 6.37812C0 7.6893 0.400967 8.90806 1.08851 9.92155H1.07727L1.16136 10.0267Z' fill='%23FC8974'/%3E%3C/svg%3E") 50% no-repeat;
-                
+                background-size: contain;
             }
         }
     }
@@ -2655,7 +2656,6 @@ img, textarea, input, table {
                 flex: 0 0 14px;
                 width: 14px;
                 height: 14px;
-                background-size: 11px;
             }
         }
     }
