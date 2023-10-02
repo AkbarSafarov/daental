@@ -3891,17 +3891,17 @@ textarea {
     }
 }
 
-.block_rec_wr {
-    padding: 0 11px 18px
+.title_block {
+    padding: 0 16px
 }
 
-.block_rec_wr .title {
+.title_block .title {
     text-align: center;
     padding-bottom: 31px;
     margin: 0
 }
 
-.block_rec_wr .title span {
+.title_block .title span {
     color: #000;
     font-size: 48px;
     font-style: normal;
@@ -3911,7 +3911,7 @@ textarea {
     position: relative
 }
 
-.block_rec_wr .title span i {
+.title_block .title span i {
     position: absolute;
     top: -10px;
     left: 100%;
@@ -3926,25 +3926,29 @@ textarea {
 }
 
 @media (max-width:1200px) {
-    .block_rec_wr .title span {
+    .title_block .title span {
         font-size: 32px
     }
 }
 
 @media (max-width:1020px) {
-    .block_rec_wr .title {
+    .title_block .title {
         padding-bottom: 18px
     }
 
-    .block_rec_wr .title span {
+    .title_block .title span {
         font-size: 24px;
         display: block
     }
 
-    .block_rec_wr .title span i {
+    .title_block .title span i {
         position: static;
         display: inline-block
     }
+}
+
+.block_rec_wr {
+    padding: 0 11px 18px
 }
 
 .block_rec_wr .inner {

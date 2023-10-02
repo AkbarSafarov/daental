@@ -3818,9 +3818,9 @@ img {
     }
 }
 
-.block_rec_wr {
-    padding: 0 11px 18px;
-
+.title_block {
+    padding: 0 16px;
+    
     .title {
         text-align: center;
         padding-bottom: 31px;
@@ -3870,6 +3870,12 @@ img {
             }
         }
     }
+}
+
+.block_rec_wr {
+    padding: 0 11px 18px;
+
+    
 
     .inner {
         border-radius: 10px;
