@@ -3820,7 +3820,7 @@ img {
 
 .title_block {
     padding: 0 16px;
-    
+
     .title {
         text-align: center;
         padding-bottom: 31px;
@@ -3875,7 +3875,13 @@ img {
 .block_rec_wr {
     padding: 0 11px 18px;
 
-    
+    .image {
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+        display: block;
+        font-size: 0;
+    }
 
     .inner {
         border-radius: 10px;

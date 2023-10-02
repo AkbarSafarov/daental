@@ -3951,6 +3951,14 @@ textarea {
     padding: 0 11px 18px
 }
 
+.block_rec_wr .image {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    display: block;
+    font-size: 0
+}
+
 .block_rec_wr .inner {
     border-radius: 10px;
     background: #FFF;
