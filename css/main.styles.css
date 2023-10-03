@@ -3959,6 +3959,10 @@ textarea {
     font-size: 0
 }
 
+.block_rec_wr .image img {
+    width: 100%
+}
+
 .block_rec_wr .inner {
     border-radius: 10px;
     background: #FFF;
