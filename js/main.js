@@ -340,6 +340,18 @@ $(function(){
         $(this).parents('li:first').toggleClass('opened');
         return false;
     });
+
+    $('.links_block .last').on('click', function(){
+		if ($(this).hasClass('active')){
+			$(this).siblings().removeClass('show');
+			$(this).removeClass('active');
+			$(this).text('Показать еще');
+		} else {
+			$(this).addClass('active');
+			$(this).text('Скрыть');
+    		$(this).siblings().addClass('show');
+    	}
+    })
 });
 
 // Calculator

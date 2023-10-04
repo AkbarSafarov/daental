@@ -79,7 +79,7 @@
     right: 15px;
     width: 45px;
     z-index: 10;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10' fill='none'%3E%3Cpath d='M15.0693 1.84447L8.24815 8.5L1.06934 1.5' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% no-repeat
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='17' viewBox='0 0 9 17' fill='none'%3E%3Cpath d='M1.34447 1.27271L8 8.09389L1 15.2727' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% no-repeat
 }
 
 .catecor_menu>ul>li>a:hover:before {
@@ -90,12 +90,16 @@
 
 .catecor_menu>ul>li>ul {
     display: none;
-    padding: 13px 15px 10px 39px;
-    margin: 0;
+    padding: 0;
+    margin: 0 15px;
     list-style: none
 }
 
-.catecor_menu>ul>li>ul li a {
+.catecor_menu>ul>li>ul>li {
+    padding: 2px 10px 2px 20px
+}
+
+.catecor_menu>ul>li>ul>li>a {
     display: flex;
     align-items: center;
     color: #000;
@@ -109,8 +113,7 @@
     text-decoration: none
 }
 
-.catecor_menu>ul>li>ul li a:before {
-    content: "";
+.catecor_menu>ul>li>ul>li>a .arrow {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -121,12 +124,64 @@
     margin: auto
 }
 
-.catecor_menu>ul>li>ul li a:hover {
+.catecor_menu>ul>li>ul>li>a:hover {
     text-decoration: underline
+}
+
+.catecor_menu>ul>li>ul>li ul {
+    padding: 0 0 10px 20px;
+    margin: 0;
+    list-style: none;
+    display: none
+}
+
+.catecor_menu>ul>li>ul>li ul li a {
+    padding: 7px 0;
+    display: flex;
+    color: #565656;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: space-between;
+    text-decoration: none
+}
+
+.catecor_menu>ul>li>ul>li ul li a span {
+    text-decoration: underline
+}
+
+.catecor_menu>ul>li>ul>li ul li a span+span {
+    color: #c2c2c2;
+    text-decoration: none
+}
+
+.catecor_menu>ul>li>ul>li ul li a:hover span {
+    text-decoration: none
+}
+
+.catecor_menu>ul>li>ul>li ul li.opened a span {
+    text-decoration: none
+}
+
+.catecor_menu>ul>li>ul>li.opened {
+    background: #F2F2F2
+}
+
+.catecor_menu>ul>li>ul>li.opened>a .arrow {
+    transform: rotate(90deg)
+}
+
+.catecor_menu>ul>li>ul>li.opened>ul {
+    display: block
 }
 
 .catecor_menu>ul>li.opened>a:before {
     opacity: 1
+}
+
+.catecor_menu>ul>li.opened>a .arrow {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10' fill='none'%3E%3Cpath d='M15.0693 1.84447L8.24815 8.5L1.06934 1.5' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% no-repeat
 }
 
 .catecor_menu>ul>li.opened>ul {

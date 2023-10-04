@@ -4136,9 +4136,16 @@ textarea {
     gap: 1px 20px
 }
 
+.links_block .block_inner ul li {
+    display: none
+}
+
+.links_block .block_inner ul li:nth-child(-n+7) {
+    display: block
+}
+
 .links_block .block_inner ul li a {
     color: #565656;
-    font-family: Montserrat;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -4151,16 +4158,22 @@ textarea {
     color: #FAAA46
 }
 
-.links_block .block_inner ul li.last {
+.links_block .block_inner ul li.show {
     display: block
 }
 
-.links_block .block_inner ul li.last a {
+.links_block .block_inner ul li.last {
+    display: block;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
     text-decoration: none;
-    color: #FAAA46
+    color: #FAAA46;
+    cursor: pointer
 }
 
-.links_block .block_inner ul li.last a:hover {
+.links_block .block_inner ul li.last:hover {
     text-decoration: underline
 }
 
