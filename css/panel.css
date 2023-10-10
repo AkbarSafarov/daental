@@ -353,6 +353,10 @@
     list-style: none
 }
 
+.filter_panel .filter_inner .filter_field .field_body .checkbox_field ul li {
+    margin-bottom: 10px
+}
+
 .filter_panel .filter_inner .filter_field .field_body .checkbox_field ul li.hide {
     display: none
 }
@@ -375,9 +379,8 @@
 
 .filter_panel .filter_inner .filter_field .field_body .checkbox_field label i {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
-    bottom: 0;
     width: 18px;
     height: 18px;
     border: 1px solid #D5D5D5;
@@ -404,7 +407,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 250%;
+    line-height: 16px;
     display: block
 }
 
