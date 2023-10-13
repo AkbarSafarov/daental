@@ -4194,3 +4194,10 @@ textarea {
 .rusult_textarea {
     display: none
 }
+
+@media (min-width:1281px) {
+    .fixed_menu {
+        position: sticky !important;
+        top: 80px
+    }
+}

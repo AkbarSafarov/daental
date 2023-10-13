@@ -105,6 +105,15 @@ $(function(){
     	$('.brands_block').insertBefore('.product__reviews');
     	$('.product__sell').insertBefore('.product__buttons');
     }
+
+    $('#elementNavigation .tab').on('click', function(){
+      if ($(this).hasClass('active')){
+        $(this).removeClass('active');
+      } else {
+      	$(this).siblings().removeClass('active');
+        $(this).addClass('active');
+      }
+    });
 })
 
 const accor = document.querySelector('.questions_block__accordion');

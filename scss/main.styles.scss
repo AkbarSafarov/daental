@@ -4112,3 +4112,11 @@ img {
 .rusult_textarea {
     display: none;
 }
+
+@media all and (min-width: 1281px) {
+
+    .fixed_menu {
+        position: sticky !important;
+        top: 80px;
+    }
+}
