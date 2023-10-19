@@ -351,7 +351,25 @@ $(function(){
 			$(this).text('Скрыть');
     		$(this).siblings().addClass('show');
     	}
-    })
+    });
+
+	const link_top = $('.link_top');
+	const root = $('html, body');
+
+	link_top.on('click', function(){
+		if (!root.is(':animated')) {
+			root.animate({'scrollTop':0}, 700);
+		}
+		return false
+	});
+
+	$(window).scroll(function(){
+      	if (($(window).scrollTop() > 800)) {
+        	link_top.addClass('show'); 
+      	} else {
+        	link_top.removeClass('show');
+      	};
+    }); 
 });
 
 // Calculator
