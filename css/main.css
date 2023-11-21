@@ -3104,8 +3104,8 @@ html {
     }
 }
 
-.content__right-inner .reviews_block .swiper-wrapper {
-    align-items: center
+.content__right-inner .reviews_block .swiper-wrapper .swiper-slide {
+    height: auto
 }
 
 @media (min-width:1001px) {

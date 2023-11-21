@@ -22,7 +22,7 @@
 					$tabElements.removeClass("active");
 
 					$mainScrollObj.stop().animate({
-						scrollTop: getElementOffset("#" + toElementID) + "px"
+						scrollTop: getElementOffset("#" + toElementID) - 80 + "px"
 					}, 250);
 
 					return event.preventDefault($this.addClass("active"));
