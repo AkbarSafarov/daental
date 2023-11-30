@@ -6,7 +6,7 @@ $rc: 'Montserrat', sans-serif;
 $ps: 'Montserrat', sans-serif;
 
 $siteWidth: 1340px;                      // Ширина
-$siteMinWidth: 350px;                   // Минимальная ширина
+$siteMinWidth: 370px;                   // Минимальная ширина
 
 $siteFontFamily: $rc, arial;                 // Основное семейство
 $siteFontSize: 16px;                    // Основной размер
@@ -1165,7 +1165,7 @@ img, textarea, input, table {
 
             .logo {
                 flex: 0 0 154px;
-                margin: 0 10px;
+                margin: 10px;
                 text-align: center;
 
                 .mob {
@@ -3883,7 +3883,12 @@ img {
         font-size: 0;
 
         img {
-            width: 100%;
+            // width: 100%;
+
+            &.pc {
+                max-height: 223px;
+
+            }
         }
     }
 

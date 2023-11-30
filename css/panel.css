@@ -1,7 +1,14 @@
 .list_products {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 33px
+    gap: 30px 33px;
+    padding-bottom: 33px
+}
+
+@media (max-width:1020px) {
+    .list_products {
+        padding-bottom: 20px
+    }
 }
 
 @media (max-width:670px) {
@@ -866,7 +873,7 @@
 }
 
 .page_list_wr {
-    padding: 33px 0 44px;
+    padding: 0 0 44px;
     text-align: center
 }
 
@@ -882,7 +889,7 @@
 
 @media (max-width:1020px) {
     .page_list_wr {
-        padding: 20px 0
+        padding: 0 0 20px
     }
 
     .page_list_wr .page_list_text {
@@ -984,21 +991,21 @@
 @media (max-width:1020px) {
     .page_list_wr .page_list_items {
         gap: 8px;
-        max-width: 320px
+        max-width: 380px
     }
 
     .page_list_wr .page_list_items a {
-        height: 42px;
-        line-height: 40px
+        height: 40px;
+        line-height: 38px
     }
 
     .page_list_wr .page_list_items .number {
-        width: 42px
+        width: 40px
     }
 
     .page_list_wr .page_list_items .next,
     .page_list_wr .page_list_items .prev {
-        width: 42px
+        width: 40px
     }
 
     .page_list_wr .page_list_items .next_last,
@@ -1009,9 +1016,9 @@
     }
 
     .page_list_wr .page_list_items span.number {
-        width: 42px;
-        height: 42px;
-        line-height: 40px
+        width: 40px;
+        height: 40px;
+        line-height: 38px
     }
 
     .page_list_wr .page_list_items .first_page {
@@ -1345,7 +1352,7 @@
     gap: 28px;
     justify-content: space-between;
     box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.19);
-    z-index: 50;
+    z-index: 101;
     display: none
 }
 
