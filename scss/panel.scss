@@ -1957,3 +1957,16 @@
         background-position: 50%;
     }
 }
+
+@media all and (max-width: 768px) {
+    .files_block {
+        padding-bottom: 0;
+    }
+    .similar_block.detail_page.r-tabs,#similarBlock {
+        padding-top: 20px;
+    }
+}
+
+.product_list_wrap .select_help_wr {
+    margin-top: 30px;
+}

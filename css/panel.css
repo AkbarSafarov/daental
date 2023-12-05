@@ -1907,3 +1907,18 @@
         background-position: 50%
     }
 }
+
+@media (max-width:768px) {
+    .files_block {
+        padding-bottom: 0
+    }
+
+    #similarBlock,
+    .similar_block.detail_page.r-tabs {
+        padding-top: 20px
+    }
+}
+
+.product_list_wrap .select_help_wr {
+    margin-top: 30px
+}

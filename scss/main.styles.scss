@@ -3883,7 +3883,8 @@ img {
         font-size: 0;
 
         img {
-            // width: 100%;
+            width: 100%;
+            object-fit: cover;
 
             &.pc {
                 max-height: 223px;

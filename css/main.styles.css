@@ -3959,6 +3959,11 @@ textarea {
     font-size: 0
 }
 
+.block_rec_wr .image img {
+    width: 100%;
+    object-fit: cover
+}
+
 .block_rec_wr .image img.pc {
     max-height: 223px
 }
