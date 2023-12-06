@@ -40,6 +40,20 @@ document.addEventListener('DOMContentLoaded', function(){
 			})
 		})
 
+		function getSiblings(element) {
+		    var siblings = [];
+		    var sibling = element.parentNode.firstChild;
+
+		    while (sibling) {
+		        if (sibling.nodeType === 1 && sibling !== element) {
+		            siblings.push(sibling);
+		        }
+		        sibling = sibling.nextSibling;
+		    }
+
+		    return siblings;
+		}
+
 		
 		document.querySelector('.step1 .popup_step_form__btn a').addEventListener('click', function(){
 			let visibleValues = [],
@@ -53,7 +67,11 @@ document.addEventListener('DOMContentLoaded', function(){
 		document.querySelectorAll('.choose_answer__item').forEach(function(item) {
 			
 			item.addEventListener('click', function(){
-				document.querySelectorAll('.choose_answer__item').forEach(item => item.classList.remove('active'))
+				//document.querySelectorAll('.choose_answer__item').forEach(item => item.classList.remove('active'))
+		        let siblings = getSiblings(this);
+		        siblings.forEach(function(sibling) {
+		            sibling.classList.remove('active');
+		        });
 				item.classList.add('active');
 				document.querySelectorAll('.popup_step_form__item').forEach(function(item) {
 					if(item.classList.contains('active')) {

@@ -502,6 +502,27 @@ $(function(){
         	$('.header').removeClass('fixed');
       	};
     }); 
+
+    $('.qv_button').on('click', function(){
+    	let pageLink = window.location.href;
+    	let resultQv = pageLink + '\n';
+
+    	$('.popup_step_form .popup_step_form__item:not(.active)').each(function(){
+    		const titleText = $(this).find('.popup_step_form__title').text();
+    		const item = $(this).find('.qv_item.active');
+    		let textItem;
+
+    		if (item.find('.visible-item__title').length){
+    			textItem =  titleText + ' - ' + item.find('.visible-item__title').text() + '\n';
+    		} else {
+    			textItem =  titleText + ' - ' + item.text() + '\n';
+    		}
+
+    		resultQv += textItem;
+    	}) 
+    	
+    	$('.result_form textarea').val(resultQv)
+    });
 })
 
 // Slider

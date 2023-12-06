@@ -1922,3 +1922,7 @@
 .product_list_wrap .select_help_wr {
     margin-top: 30px
 }
+
+.result_form {
+    display: none
+}
