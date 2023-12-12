@@ -2082,7 +2082,7 @@ html {
     }
 }
 
-@media (max-width:1500px) {
+@media (max-width:1650px) {
     .content__left {
         width: 320px
     }
