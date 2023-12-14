@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		document.querySelectorAll('.hidden_value-wr input').forEach(function(item) {
 			item.addEventListener('keyup', function() {
 				if(this.value.length > 2) {
-					console.log(item.parentNode)
 					item.parentNode.parentNode.querySelector('.hidden_value').dataset.value = item.value;
 					document.querySelectorAll('.popup_step_form__item').forEach(function(item) {
 						if(item.classList.contains('active')) {

@@ -539,6 +539,10 @@ $(function(){
 
 		if (item.find('.visible-item__title').length){
 			textItem =  titleText + ' - ' + item.find('.visible-item__title').text() + '\n';
+		} else if (item.hasClass('hidden_value')){
+			const variant = parents.find('.hidden_value-wr.active input').val();
+
+			textItem =  titleText + ' - ' + variant + '\n';
 		} else {
 			textItem =  titleText + ' - ' + item.text() + '\n';
 		}
