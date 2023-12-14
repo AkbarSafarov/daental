@@ -503,26 +503,52 @@ $(function(){
       	};
     }); 
 
-    $('.qv_button').on('click', function(){
-    	let pageLink = window.location.href;
-    	let resultQv = pageLink + '\n';
+    let pageLink = window.location.href;
+	let resultQv = pageLink + '\n';
+	$('.result_form textarea').val(resultQv);
 
-    	$('.popup_step_form .popup_step_form__item:not(.active)').each(function(){
-    		const titleText = $(this).find('.popup_step_form__title').text();
-    		const item = $(this).find('.qv_item.active');
-    		let textItem;
+	
 
-    		if (item.find('.visible-item__title').length){
-    			textItem =  titleText + ' - ' + item.find('.visible-item__title').text() + '\n';
-    		} else {
-    			textItem =  titleText + ' - ' + item.text() + '\n';
-    		}
-
-    		resultQv += textItem;
-    	}) 
+    // $('.qv_button').on('click', function(){
     	
-    	$('.result_form textarea').val(resultQv)
+
+    // 	$('.popup_step_form .popup_step_form__item:not(.active)').each(function(){
+    // 		const titleText = $(this).find('.popup_step_form__title').text();
+    // 		const item = $(this).find('.qv_item.active');
+    // 		let textItem;
+
+    // 		if (item.find('.visible-item__title').length){
+    // 			textItem =  titleText + ' - ' + item.find('.visible-item__title').text() + '\n';
+    // 		} else {
+    // 			textItem =  titleText + ' - ' + item.text() + '\n';
+    // 		}
+
+    // 		resultQv += textItem;
+    // 	}) 
+    	
+    // 	$('.result_form textarea').val(resultQv)
+    // });
+
+    $('.popup_step_form__btn a').on('click', function(){
+    	let textareaQv = $('.result_form textarea').val();
+    	let parents = $(this).parents('.popup_step_form__item');
+
+    	const titleText = parents.find('.popup_step_form__title').text();
+		const item = parents.find('.qv_item.active');
+		let textItem;
+
+		if (item.find('.visible-item__title').length){
+			textItem =  titleText + ' - ' + item.find('.visible-item__title').text() + '\n';
+		} else {
+			textItem =  titleText + ' - ' + item.text() + '\n';
+		}
+
+		textareaQv += textItem;
+    	
+    	$('.result_form textarea').val(textareaQv)
     });
+
+    
 })
 
 // Slider
