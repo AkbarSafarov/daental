@@ -1080,7 +1080,7 @@
         padding: 30px 44px 30px 26px;
 
         @media all and (max-width: 1020px){
-            padding: 20px;
+            padding: 20px 30px;
         }
 
         .coll_range {
@@ -1147,6 +1147,17 @@
                         line-height: normal;
                         padding: 8px 10px;
                         border: 1px solid #E1E1E1;
+
+                        br {
+                            @media all and (min-width: 1021px) {
+                                display: none;
+                            }
+                        }
+
+                        @media all and (max-width: 1020px) {
+                            padding: 6px;
+                            font-size: 12px;
+                        }
                     }
 
                     .pips {

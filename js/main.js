@@ -485,7 +485,7 @@ $(function(){
 
 	            if(prefix == '%') {
 		            const tooltipPay = $('#payment-slider').find('.noUi-tooltip').text();
-	        		$('#payment-slider').find('.noUi-tooltip').html(`${tooltipPay} или ${payment.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} ₽` );
+	        		$('#payment-slider').find('.noUi-tooltip').html(`${tooltipPay} или <br> ${payment.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} ₽` );
 	        	}
 	        });
 		})

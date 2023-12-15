@@ -1061,7 +1061,7 @@
 
 @media (max-width:1020px) {
     .calculator_block_wr .calculator_block {
-        padding: 20px
+        padding: 20px 30px
     }
 }
 
@@ -1130,6 +1130,19 @@
     line-height: normal;
     padding: 8px 10px;
     border: 1px solid #E1E1E1
+}
+
+@media (min-width:1021px) {
+    .calculator_block_wr .calculator_block .coll_range .field_slider .range_slider .noUi-horizontal .noUi-tooltip br {
+        display: none
+    }
+}
+
+@media (max-width:1020px) {
+    .calculator_block_wr .calculator_block .coll_range .field_slider .range_slider .noUi-horizontal .noUi-tooltip {
+        padding: 6px;
+        font-size: 12px
+    }
 }
 
 .calculator_block_wr .calculator_block .coll_range .field_slider .range_slider .pips {
