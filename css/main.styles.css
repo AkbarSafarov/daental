@@ -2485,6 +2485,10 @@ textarea {
     background: linear-gradient(270deg, #BE4F43 12.84%, #FC9527 100%)
 }
 
+.btn_buy.requestPrice {
+    background: linear-gradient(270deg, #BE4F43 12.84%, #FC9527 100%)
+}
+
 .product_item {
     border-radius: 10px;
     background: #FFF;
