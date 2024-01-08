@@ -1962,3 +1962,36 @@
 #compareBlock .left .headingTools div {
     height: auto
 }
+
+#authMenu,
+#compare,
+#personalCart,
+#personalMenuWrap,
+#wishlist,
+.bx-auth,
+.contactList,
+.global-block-container {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 11px;
+    padding-right: 11px;
+    box-sizing: border-box
+}
+
+.global-block-container h1 {
+    margin-left: 0 !important
+}
+
+.content_block_wr>h1 {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 11px;
+    padding-right: 11px;
+    box-sizing: border-box
+}
+
+#authMenu a {
+    color: #000
+}

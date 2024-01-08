@@ -2008,3 +2008,30 @@
 #compareBlock .left .headingTools div {
     height: auto;
 }
+
+
+#personalMenuWrap,.global-block-container,.contactList,#authMenu,.bx-auth,#compare,#wishlist,#personalCart {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 11px;
+    padding-right: 11px;
+    box-sizing: border-box;
+}
+
+.global-block-container h1 {
+    margin-left: 0 !important;
+}
+
+.content_block_wr > h1 {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 11px;
+    padding-right: 11px;
+    box-sizing: border-box;
+}
+
+#authMenu a {
+    color: #000;
+}
